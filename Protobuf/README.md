@@ -72,6 +72,7 @@ int main()
 
 > 本节我们将重点介绍Protobuf的使用方法。但XML及其各种变体（如HTML、XAML）和JSON也在软件部的后续开发中有着广泛应用。感兴趣的同学可以参考相关资料了解[XML](https://www.w3school.com.cn/xml/xml_intro.asp)和[JSON](https://www.w3school.com.cn/js/js_json_intro.asp)的更多使用方法。
 
+<u>这一部分相当于是在引入protobuf的意义。是否需要介绍的再详细些？</u>
 ## protobuf的安装
 
 protobuf可以通过以下方式安装（参考自[Protobuf C++ Installation](https://github.com/protocolbuffers/protobuf/blob/main/src/README.md)）
@@ -242,6 +243,8 @@ message StudentInfo
 
 此处由于篇幅所限，我们不做过多展开。
 
+<u>protobuf的一些稍高级的用法，我认为不必展开介绍。</u>
+
 ## 使用proto文件进行序列化和反序列化
 
 ### 生成目标语言文件
@@ -324,7 +327,7 @@ int main()
 
 ```
 
-需要指出的是，想要成功生成可执行文件，需要链接protobuf的静态库和动态库。在linux系统上引用到protobuf的C++工程，最好的方法是使用CMake。在本例中，库的依赖关系由CMake工具处理。
+需要指出的是，想要成功生成可执行文件，需要链接protobuf的静态库和动态库。在linux系统上应用使用到protobuf的C++工程，最好的方法是使用CMake。在本例中，库的依赖关系由CMake工具处理。
 
 ### Csharp
 

@@ -89,6 +89,8 @@ Port(端口)在电脑网络中是一种经过软件创建的服务，在一个�
 * windows：`netstat -ano| findstr "<port>"`
 * linux：`netstat -tunlp | grep <port>`或`lsof -i:<port>`
 
+<u>写到这里我突然想到一个问题：为什么THUAI5中一般以7777或8888作为默认端口，这个有约定吗？</u>
+
 ## gRPC概况
 
 gRPC的全称是gRPC Remote Procedure Calls。其中“Remote Procedure Calls”翻译为“远程过程调用”。“远程过程调用”指的是客户端（Client）可以像调用本地对象一样直接调用服务端（Server）应用的方法。具体过程如下：
@@ -152,6 +154,8 @@ $ popd
 > $ tar -zxvf third_party.tar.gz
 > $ cd ..
 > ```
+
+<u>gRPC的安装十分折磨人，至少按照官网的流程是不能安装成功的，必须要使用submodule，然而`git submodule`指令又十分容易挂，所以只能使用此方法...</u>
 
 ### Csharp
 
@@ -491,6 +495,8 @@ foreach (var tup in tups)
 运行结果如下：
 
 ![运行结果](https://s2.loli.net/2022/07/04/pcQgowRDOyLNfHZ.png)
+
+<u>这里用到的Csharp语法是否需要介绍一下？（我觉得没什么必要）</u>
 
 ## 参考与荐读
 
