@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package hello;
+
+message Adder {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message Result {
+    int32 res = 1;
+}
+
+message NumberPair {
+    int32 val = 1;
+    int32 times = 2;
+}
+
+message Number {
+    int32 val = 1;
+}
+
+service RemoteAdd {
+    rpc GetResult(Adder) returns (Result) {}
+    rpc GetNumberSequence(NumberPair) returns(stream Number) {}
+}
