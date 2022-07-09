@@ -105,6 +105,7 @@ namespace GrpcTest.Server
         {
             try
             {
+                // 禁止复用端口！！！（SoReuseport 置为 0）
                 Grpc.Core.Server server = new Grpc.Core.Server(new[] { new ChannelOption(ChannelOptions.SoReuseport, 0) })
                 {
                     Services = { Calculator.BindService(new CalculatorImpl()) },
